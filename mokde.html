@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Mokde App</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+
+      <!-- Custom styles for this template -->
+      <link href="css/navbar-fixed-top.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <style>
+        .active{
+            background-color: #F5511E;
+        }
+      </style>
+   </head>
+   <body>
+      <!--Mokde mainmenu -->
+      <div id="mokdenav">
+        <nav class="navbar navbar-default" style="background-color: #F5511E;">
+            <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" style="background-color: white;" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" style="color: white;" href="#">Brand</a>
+              </div>
+          
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a style="color: white;" href="#btnAbout">About</a></li>
+                  <li><a style="color: white;" href="#backup">Backup</a></li>
+                  <li><a style="color: white;" href="#restore">Restore</a></li>
+                  
+                </ul>
+              </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+          </nav>
+      </div>
+
+      <div class="container">
+
+         <div id="dataBox" style="display: none">
+            <div class="row">
+               <div class="table-responsive" style="padding-left: 20; padding-right: 20">
+                  <table id="maintable" class="table table-striped">
+                     <thead>
+
+                     </thead>
+                     <tbody>
+
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+         </div>
+
+         <!--Frm add kenalan-->
+         <div id="frmAddData" style="display: none">
+               <nav class="navbar navbar-default navbar-fixed-top oren">
+                  <div>
+                     <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed fa fa-bars" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"></button>
+                        <button onclick="location.href=''" class="navbar-toggle kiri fa fa-arrow-left kiri"></button>
+                        <a class="navbar-brand" href="mokde.html"><b>Input</b></a>
+                     </div>
+                     <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav putih">
+                           <li><a href="#about">About</a></li>
+                           <li><a href="#backup">Backup</a></li>
+                           <li><a href="#restore">Restore</a></li> 
+                        </ul>
+                     </div>
+                  </div>  
+            </nav>
+         
+            <div class="row">
+               <div class="col-sm-6">
+                  <form class="form-signin" id="frmAddData">
+                     <div class="container divInput">
+                        <h5>Enter the nickname</h5>
+                        <input type="text" id="nickname" name="nickname">
+                        <br><br> 
+                        <h5>Enter the username</h5>
+                        <input type="text" id="username" name="username">
+                        <br><br>
+                        <h5>Enter the password</h5>
+                        <input type="text" id="password" name="password">
+                     
+                        <div id="savebtn">
+                           <nav class="navbar navbar-fixed-bottom">
+                              <input type="checkbox" id="check">
+                              <label class="chat-btn save" for="check">
+                              <button class="btn-save" type="submit"> <i class="fa fa-save"></i> </button>
+                           </nav>
+                        </div>
+                     </div>
+
+                  </form>
+               </div>
+            </div>
+         </div>
+
+         <!--Frm view kenalan-->
+         <div id="viewData" style="display: none">
+            <div class="row">
+               <div class="col-sm-6">
+                  <form class="form-signin" id="frmEditData">
+                     <div class="container divInput">
+                        <h5>User Name</h5>
+                        <input type="text" name="username" readonly style="background-color:  rgb(153, 214, 238);" >
+                        <br><br> 
+                        <h5>User Password</h5>
+                        <input type="text" name="password" readonly style="background-color:  rgb(153, 214, 238);">
+                     
+                        <div id="diveditbutton">
+                           <nav class="navbar navbar-fixed-bottom">
+                              <input type="checkbox" id="check">
+                              <label class="chat-btn pencil" for="check"><button type="submit">
+                              <i class="fa fa-pencil"></i></button>
+                           </nav>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+
+         <!--Frm edit kenalan-->
+         <div id="editData" style="display: none">
+            <div class="row">
+               <div class="col-sm-6">
+                  <form class="form-signin" id="frmEditData">
+                     <div class="container divInput">
+                        <h5>User Name</h5>
+                        <input type="text" name="username" style="background-color:  #72f566;" >
+                        <br><br> 
+                        <h5>User Password</h5>
+                        <input type="text" name="password"  style="background-color:  #72f566;">
+                        
+                        <div id="divsavebutton">
+                           <nav class="navbar navbar-fixed-bottom">
+                              <input type="checkbox" id="check">
+                              <label class="chat-btn save" for="check"><button type="submit">
+                              <i class="fa fa-save"></i></button>
+                           </nav>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+
+         <!-- #about -->
+         <div id="About" style="display: none">
+
+            <nav class="navbar navbar-default navbar-fixed-top oren">
+               <div>
+                  <div class="navbar-header">
+                     <button type="button" class="navbar-toggle collapsed fa fa-bars" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"></button>
+                     <button onclick="location.href=''" class="navbar-toggle kiri fa fa-arrow-left kiri"></button>
+                     <a class="navbar-brand" href="mokde.html"><b>About</b></a>
+                  </div>
+                  <div id="navbar" class="navbar-collapse collapse">
+                     <ul class="nav navbar-nav putih">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#backup">Backup</a></li>
+                        <li><a href="#restore">Restore</a></li> 
+                     </ul>
+                  </div>
+               </div>  
+            </nav>
+         
+            <div class="row">
+               <div class="col-sm-6">
+                  <div id="maincontent">
+                     <h1>Page Content<h2>
+                     <button id="button_About">Show Popup</button>
+                  </div>
+                  <div id="overlay_About"></div>
+                  <div id="popup_About">
+                     <div class="popupcontrols_About">
+                        <span id="popupclose_About">X</span>
+                     </div>
+                     <div class="popupcontent_About">
+                        <p><h1 style="color: white;">Mokde</h1>
+                           <br />This app:
+                        <ol>
+                           <li>Used to store username and password</li>
+                           <li>All data stored locally</li>
+                           <li>No internet connection is required</li>
+                        </ol></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         
+      </div>
+
+      <div id="buttonAddData">
+         <nav class="navbar navbar-fixed-bottom">
+            <input type="checkbox" id="check">
+            <label class="chat-btn" for="check"><a class="btn" href="#btnAddData" role="button">
+            <i class="fa fa-plus"></i>
+         </nav>
+      </div>
+         
+
+      <script src="js/jquery-3.2.1.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/signals.min.js"></script>
+      <script src="js/hasher.min.js"></script>
+      <script src="js/crossroads.min.js"></script>
+      <script src="js/index.js"></script>
+
+   </body>
+</html>
